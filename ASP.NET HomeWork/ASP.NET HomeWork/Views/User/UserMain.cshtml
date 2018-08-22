@@ -1,0 +1,68 @@
+﻿@using ASP.NET_HomeWork.Models
+@model AllModel
+@{
+    ViewBag.Title = "UserMain";
+
+
+}
+<div>
+    <h2>@ViewBag.Name</h2>
+    <table>
+        <tr>
+            <td><img src="~/Photos/@ViewBag.Id" width="200" height="150" /></td>
+
+        </tr>
+        <tr>
+            <td>
+                @ViewBag.Phone
+                @ViewBag.Email
+                @ViewBag.Address
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <a href="~/User/EditProfile">編輯我的資料</a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <a href="~/FileUpload/create">上傳大頭照</a>
+                </div>
+            </td>
+        </tr>
+
+
+    </table>
+</div>
+<div>
+    <h2>留言板</h2>
+    <div>
+        <a href="~/User/NewMessage">新增留言</a>
+    </div>
+    <table border="1">
+        <tr>
+            <td>留言人</td>
+            <td>留言日期</td>     
+            <td>留言內容</td>
+        </tr>
+        
+            @foreach (var t in Model.T2)
+            {
+                <tr>
+                    <td>@t.fName</td>
+                    <td>@t.fDate</td>                    
+                    <td>@t.fMessage</td>
+                </tr>
+            }
+        
+
+    </table>
+</div>
+
+
+
+
+

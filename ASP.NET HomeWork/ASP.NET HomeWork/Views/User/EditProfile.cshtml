@@ -1,0 +1,16 @@
+﻿@model ASP.NET_HomeWork.tCustomer
+@{
+    ViewBag.Title = "EditProfile";
+}
+
+<h2>編輯我的資料</h2>
+<form method="post" action="~/Customer/Edit">
+    @Html.EditorForModel()
+    @{ 
+
+//string photoName = Guid.NewGuid().ToString() + ".jpg";//guid為16進位流水號
+//e.Values["fPath"] = "~/pic/" + photoName;
+//FileUpload1.SaveAs(Server.MapPath("../pic/" + photoName));
+    }
+    <input type="submit" value="送出" />
+</form>

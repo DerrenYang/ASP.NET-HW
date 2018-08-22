@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "NewMessage";
+    tCustomer customer = Session[CDictionary.LOGIN_USER] as tCustomer;
+    ViewBag.id = customer.fId;
+    ViewBag.name = customer.fName;
+    ViewBag.date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+    }
+
+    <h2>新增留言</h2>
+    <form method="post" action="~/User/NewMessage">
+        <table>
+            <tr>
+                <td>留言人ID</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="fId" value="@ViewBag.id" /></td>
+            </tr>
+            <tr>
+                <td>留言人</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="fName" value="@ViewBag.name" /></td>
+            </tr>
+            <tr>
+                <td>留言日期</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="fDate" value="@ViewBag.date" /></td>
+            </tr>
+            <tr>
+                <td>留言內容</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="fMessage" /></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="送出" /></td>
+            </tr>
+
+        </table>
+    </form>
+

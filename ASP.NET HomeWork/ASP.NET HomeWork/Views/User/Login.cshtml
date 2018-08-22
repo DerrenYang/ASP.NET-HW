@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<div align="center">
+    <h2>登入</h2><br /><br />
+    <form method="post" action="~/User/Login">
+        <table>
+            <tr>
+                <td align="center">帳號(電子郵件)</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="fEmail" /></td>
+            </tr>
+            <tr>
+                <td align="center"><br />密碼</td>
+            </tr>
+            <tr>
+                <td><input type="password" name="fPassword" /></td>
+            </tr>
+            <tr>
+                <td align="center"><label style='color: #FF0000'>@ViewBag.kk</label></td>
+            </tr>
+
+            <tr>
+                <td align="center"><br /><br /><input type="submit" value="登入" /></td>
+
+            </tr>
+
+            <tr>
+                <td><br /><a href="../User/SignUp">沒有帳號嗎?點我註冊新帳號</a></td>
+            </tr>
+
+        </table>
+    </form>
+</div>
+
